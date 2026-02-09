@@ -12,7 +12,6 @@ class Solution:
                 sums += i[0]
             elif nums[i[1]] % 2 == 1 and i[0]% 2 == 1:
                 sums += nums[i[1]] + i[0]
-            print(sums)
             nums[i[1]] += i[0]
             ans.append(sums)
         return ans
