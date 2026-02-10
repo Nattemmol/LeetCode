@@ -6,6 +6,8 @@ class Solution:
         if len(changed) % 2 == 1:
             return []
 
+        if count[0] % 2 == 1:
+            return []
         if count[0] % 2 == 0:
             ans.extend([0] * (count[0]//2))
 
