@@ -4,6 +4,5 @@ class Solution:
         
         for i in range(len(matrix2[0])):
             for j in range(len(matrix2)):
-                print(i,j)
                 matrix2[j][i] = matrix[i][j]
         return matrix2
