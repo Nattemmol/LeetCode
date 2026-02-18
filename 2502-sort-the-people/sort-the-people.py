@@ -8,13 +8,11 @@ class Solution:
         counts = {}
         for i in range(len(heights)):
             counts[heights[i]] = names[i]
-        print(counts)
 
         ans = []
         mini = min(counts)
         for i in range(maxi,mini-1,-1):
             if i in counts:
                 ans.append(counts[i])
-
         return ans
         
