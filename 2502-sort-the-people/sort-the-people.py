@@ -1,9 +1,20 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
-        for i in range(len(names)):
-            for j in range(len(names)-i-1):
-                if heights[j] < heights[j+1]:
-                    heights[j],heights[j+1] = heights[j+1], heights[j]
-                    names[j],names[j+1] = names[j+1], names[j]
+        
+        maxi = 0
+        for i in heights:
+            if i > maxi:
+                maxi = i
+        counts = {}
+        for i in range(len(heights)):
+            counts[heights[i]] = names[i]
+        print(counts)
 
-        return names
+        ans = []
+        mini = min(counts)
+        for i in range(maxi,mini-1,-1):
+            if i in counts:
+                ans.append(counts[i])
+
+        return ans
+        
