@@ -9,12 +9,12 @@ class Solution:
         if not head or not head.next:
             return head
 
-        dummy = ListNode(0, head)
-        left = dummy
+        
+        left = head
         right = head
         while right and right.next:
             left = left.next
             right = right.next.next
         
 
-        return left.next
+        return left
