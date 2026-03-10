@@ -10,7 +10,7 @@ class Solution:
                     stack.append(1)
                 else:
                     sums = 0
-                    while stack and stack[-1] != '(':
+                    while stack[-1] != '(':
                         sums += stack.pop()
                     stack.pop()
                     stack.append(sums*2)
