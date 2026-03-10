@@ -6,7 +6,6 @@ class Solution:
         for i,temp in enumerate(temperatures):
             while stack and temp > stack[-1][0]:
                 top = stack.pop()
-                print(top)
                 ans[top[1]] = i-top[1]
             stack.append((temp,i))
         
