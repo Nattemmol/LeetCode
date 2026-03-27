@@ -15,4 +15,4 @@ class Solution:
         if not root.right:
             return 1 + self.minDepth(root.left)
         
-        return min(self.minDepth(root.left),self.minDepth(root.right)) + 1
+        return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
