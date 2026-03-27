@@ -12,7 +12,6 @@ class Solution:
         def makeTree():
             
             node = TreeNode(postorder.pop())
-
             if node.val != preorder[-1]:
                 node.right = makeTree()
             if node.val != preorder[-1]:
@@ -20,8 +19,6 @@ class Solution:
             
             preorder.pop()
             return node
-
-        
         return makeTree()
 
 
