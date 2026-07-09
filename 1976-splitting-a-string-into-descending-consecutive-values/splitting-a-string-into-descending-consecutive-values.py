@@ -1,9 +1,9 @@
 class Solution:
     def splitString(self, s: str) -> bool:
-        
         def dfs(i,prev):
             if i == len(s):
                 return True
+            
             for j in range(i,len(s)):
                 val = int(s[i:j+1])
                 if val+1 == prev and dfs(j+1,val):
